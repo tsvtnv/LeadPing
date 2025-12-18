@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -19,19 +20,19 @@ const Footer: React.FC = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About LeadPing', path: '#' },
-        { name: 'Our Mission', path: '#' },
-        { name: 'Customer Stories', path: '#' },
-        { name: 'Careers', path: '#' },
+        { name: 'About LeadPing', path: '/about' },
+        { name: 'Intelligence Log', path: '/blog' },
+        { name: 'Customer Stories', path: '/customer-stories' },
+        { name: 'Careers', path: '/careers' },
       ],
     },
     {
       title: 'Support',
       links: [
-        { name: 'Help Center', path: '#' },
-        { name: 'API Docs', path: '#' },
-        { name: 'Status', path: '#' },
-        { name: 'Contact Us', path: 'mailto:support@leadping.com' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'API Docs', path: '/api-docs' },
+        { name: 'Status', path: '/status' },
+        { name: 'Contact Us', path: '/contact' },
       ],
     },
   ];
@@ -66,7 +67,7 @@ const Footer: React.FC = () => {
               <div className="bg-black text-white p-2 rounded-xl group-hover:scale-110 transition-transform duration-300">
                 <Zap size={24} fill="currentColor" />
               </div>
-              <span className="font-black text-2xl tracking-tighter italic italic">LeadPing</span>
+              <span className="font-black text-2xl tracking-tighter italic">LeadPing</span>
             </Link>
             <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-sm mb-10">
               The world's fastest lead intelligence loop. We help high-performance teams close deals in seconds, not hours.
@@ -124,7 +125,6 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="text-[11px] font-black text-gray-400 hover:text-black uppercase tracking-widest transition-colors">Privacy</Link>
               <Link to="/terms" className="text-[11px] font-black text-gray-400 hover:text-black uppercase tracking-widest transition-colors">Terms</Link>
-              <Link to="/security" className="text-[11px] font-black text-gray-400 hover:text-black uppercase tracking-widest transition-colors">Security</Link>
             </div>
           </div>
 

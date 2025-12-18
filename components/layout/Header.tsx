@@ -34,6 +34,7 @@ const Header: React.FC = () => {
     { name: 'Features', path: '/features' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Deliverability', path: '/deliverability' },
+    { name: 'Blog', path: '/blog' },
   ];
 
   const menuVariants = {
@@ -75,7 +76,7 @@ const Header: React.FC = () => {
         transition-all duration-500 border
         ${isScrolled 
           ? 'bg-white/80 backdrop-blur-2xl border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] scale-[0.98]' 
-          : 'bg-white/40 backdrop-blur-sm border-transparent'
+          : 'bg-transparent border-transparent'
         }
       `}>
         {/* Logo Section */}
@@ -83,7 +84,7 @@ const Header: React.FC = () => {
           <motion.div 
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.9 }}
-            className="bg-black text-white p-2 rounded-xl group-hover:shadow-[0_0_20px_rgba(0,0,0,0.2)] transition-all duration-300"
+            className={`p-2 rounded-xl transition-all duration-300 ${isScrolled ? 'bg-black text-white shadow-[0_0_20px_rgba(0,0,0,0.2)]' : 'bg-black text-white'}`}
           >
             <Zap size={20} fill="currentColor" className="group-hover:animate-pulse" />
           </motion.div>

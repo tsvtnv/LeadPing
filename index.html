@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LeadPing - AI Lead Follow-up</title>
     <meta name="description" content="Reply to new leads in 30 seconds. LeadPing captures enquiries, drafts a reply, and sends it instantly." />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN (Required for Preview Environment) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -20,34 +28,47 @@
             fontFamily: {
               sans: ['Inter', 'system-ui', 'sans-serif'],
             },
-          },
-        },
+          }
+        }
       }
     </script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-      body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-    </style>
-  <script type="importmap">
+
+    <!-- ESM Importmap: Consolidated to prevent React version splitting -->
+    <script type="importmap">
 {
   "imports": {
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.1?deps=react@19.0.0,react-dom@19.0.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.15.0?deps=react@19.0.0,react-dom@19.0.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.468.0?deps=react@19.0.0,react-dom@19.0.0",
+    "clsx": "https://esm.sh/clsx@2.1.1",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "clsx": "https://esm.sh/clsx@^2.1.1",
-    "@prisma/client": "https://esm.sh/@prisma/client@^7.1.0",
-    "stripe": "https://esm.sh/stripe@^20.0.0",
-    "next-auth/": "https://esm.sh/next-auth@^4.24.13/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "stripe": "https://esm.sh/stripe@^20.1.0",
     "next-auth": "https://esm.sh/next-auth@^4.24.13",
-    "@next-auth/prisma-adapter": "https://esm.sh/@next-auth/prisma-adapter@^1.0.7"
+    "next-auth/": "https://esm.sh/next-auth@^4.24.13/",
+    "@next-auth/prisma-adapter": "https://esm.sh/@next-auth/prisma-adapter@^1.0.7",
+    "@prisma/client": "https://esm.sh/@prisma/client@^7.2.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
-</head>
-  <body class="bg-background text-foreground selection:bg-black selection:text-white">
+    
+    <style>
+      /* Prevent FOUC (Flash of Unstyled Content) */
+      body { visibility: hidden; }
+      .tailwind-ready body { visibility: visible; }
+    </style>
+    <script>
+      // Show body once Tailwind has processed the classes
+      window.addEventListener('load', () => document.documentElement.classList.add('tailwind-ready'));
+    </script>
+  </head>
+  <body class="bg-white text-black selection:bg-black selection:text-white">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

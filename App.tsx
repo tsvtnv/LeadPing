@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HashRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/layout/Header';
@@ -7,6 +8,15 @@ import HowItWorks from './pages/HowItWorks';
 import Features from './pages/Features';
 import Pricing from './pages/Pricing';
 import Deliverability from './pages/Deliverability';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import About from './pages/About';
+import CustomerStories from './pages/CustomerStories';
+import Careers from './pages/Careers';
+import HelpCenter from './pages/HelpCenter';
+import ApiDocs from './pages/ApiDocs';
+import Status from './pages/Status';
+import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
@@ -39,7 +49,7 @@ const ScrollToTop = () => {
 const MarketingLayout: React.FC<{children: React.ReactNode}> = ({ children }) => (
   <div className="flex flex-col min-h-screen bg-white text-black font-sans">
     <Header />
-    <main className="flex-grow pt-16">
+    <main className="flex-grow">
       {children}
     </main>
     <Footer />
@@ -57,6 +67,15 @@ const App: React.FC = () => {
         <Route path="/features" element={<MarketingLayout><Features /></MarketingLayout>} />
         <Route path="/pricing" element={<MarketingLayout><Pricing /></MarketingLayout>} />
         <Route path="/deliverability" element={<MarketingLayout><Deliverability /></MarketingLayout>} />
+        <Route path="/blog" element={<MarketingLayout><Blog /></MarketingLayout>} />
+        <Route path="/blog/:id" element={<MarketingLayout><BlogPost /></MarketingLayout>} />
+        <Route path="/about" element={<MarketingLayout><About /></MarketingLayout>} />
+        <Route path="/customer-stories" element={<MarketingLayout><CustomerStories /></MarketingLayout>} />
+        <Route path="/careers" element={<MarketingLayout><Careers /></MarketingLayout>} />
+        <Route path="/help" element={<MarketingLayout><HelpCenter /></MarketingLayout>} />
+        <Route path="/api-docs" element={<MarketingLayout><ApiDocs /></MarketingLayout>} />
+        <Route path="/status" element={<MarketingLayout><Status /></MarketingLayout>} />
+        <Route path="/contact" element={<MarketingLayout><Contact /></MarketingLayout>} />
         <Route path="/privacy" element={<MarketingLayout><Privacy /></MarketingLayout>} />
         <Route path="/terms" element={<MarketingLayout><Terms /></MarketingLayout>} />
 

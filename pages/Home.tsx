@@ -197,7 +197,7 @@ const Home: React.FC = () => {
             {/* The LeadPing Way */}
             <div className="bg-black p-12 lg:p-20 rounded-[4rem] text-white shadow-[0_50px_120px_rgba(0,0,0,0.2)] relative overflow-hidden">
               <div className="bg-blue-600 text-white w-fit px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-8">LeadPing Intelligence</div>
-              <h3 className="text-4xl font-black italic tracking-tighter mb-10">Neural Velocity</h3>
+              <h3 className="text-4xl font-black italic tracking-tighter mb-10">Neural LeadPing</h3>
               <div className="space-y-8">
                 {[
                   { time: '0s', action: 'Lead hits submit', status: 'Captured' },
@@ -304,7 +304,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* --- SECTION 4: VELOCITY WORKFLOW --- */}
+      {/* --- SECTION 4: LEADPING WORKFLOW --- */}
       <section className="bg-white py-52 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
@@ -314,7 +314,7 @@ const Home: React.FC = () => {
                <div className="bg-white border border-gray-100 p-12 lg:p-16 rounded-[4rem] shadow-[0_40px_100px_rgba(0,0,0,0.06)] relative overflow-hidden group">
                   <div className="flex items-center gap-4 mb-14 pb-10 border-b border-gray-50">
                     <div className="p-4 bg-black text-white rounded-2xl shadow-xl group-hover:rotate-12 transition-transform"><GitMerge size={24}/></div>
-                    <h4 className="text-2xl font-black italic tracking-tighter">Velocity Builder</h4>
+                    <h4 className="text-2xl font-black italic tracking-tighter">LeadPing Builder</h4>
                   </div>
                   
                   <div className="space-y-10 relative">
@@ -362,7 +362,7 @@ const Home: React.FC = () => {
                 </div>
                 <div>
                    <h5 className="font-black text-4xl italic tracking-tight mb-2">3.2x</h5>
-                   <p className="text-[11px] text-gray-400 font-black uppercase tracking-[0.2em]">Booking Velocity</p>
+                   <p className="text-[11px] text-gray-400 font-black uppercase tracking-[0.2em]">Booking LeadPing</p>
                 </div>
               </div>
             </div>
@@ -383,7 +383,7 @@ const Home: React.FC = () => {
             { quote: "The 30-second loop is no joke. We've booked meetings while literally out at lunch.", author: "Sarah M.", role: "Founder, GrowthOps", stats: "Instant ROI" },
             { quote: "Finally, an AI that actually sounds like me. The tone-matching is world-class.", author: "David P.", role: "Sales Lead, Nebula", stats: "85% Auto-Send" }
           ].map((item, i) => (
-            <div key={i} className="bg-white border border-gray-100 p-12 rounded-[3rem] shadow-sm flex flex-col justify-between hover:shadow-2xl transition-all h-[400px]">
+            <div key={i} className="bg-white border border-gray-200 p-12 rounded-[3rem] shadow-sm flex flex-col justify-between hover:shadow-2xl transition-all h-[400px]">
               <div>
                 <Quote size={40} className="text-black/5 mb-8" />
                 <p className="text-xl font-medium italic text-gray-800 leading-relaxed">"{item.quote}"</p>
