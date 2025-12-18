@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeadPing - AI Lead Follow-up</title>
+    <meta name="description" content="Reply to new leads in 30 seconds. LeadPing captures enquiries, drafts a reply, and sends it instantly." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#ffffff',
+              foreground: '#09090b',
+              muted: '#71717a',
+              border: '#e4e4e7',
+              input: '#f4f4f5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "@prisma/client": "https://esm.sh/@prisma/client@^7.1.0",
+    "stripe": "https://esm.sh/stripe@^20.0.0",
+    "next-auth/": "https://esm.sh/next-auth@^4.24.13/",
+    "next-auth": "https://esm.sh/next-auth@^4.24.13",
+    "@next-auth/prisma-adapter": "https://esm.sh/@next-auth/prisma-adapter@^1.0.7"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-foreground selection:bg-black selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
